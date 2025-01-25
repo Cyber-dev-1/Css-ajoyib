@@ -11,13 +11,15 @@
     <script>
         const button = document.querySelector(".button");
 
-        button.addEventListener("click", (e) =>{
+        button.addEventListener("click", (e) => {
             e.preventDefault();
             button.classList.add("animate");
 
+            // Animatsiya tugaganidan so'ng index2.html sahifasiga yo'naltirish
             setTimeout(() => {
                 button.classList.remove("animate");
-            }, 600) // 1s =1000ms
+                window.location.href = "index2.html"; // index2.html ga o'tish
+            }, 600); // 600ms - animatsiya davomiyligi
         });
     </script>
 </body>
